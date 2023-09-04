@@ -6,7 +6,7 @@ const AddBlog = () => {
     const [blogData, setBlogData] = useState({
         title: "",
         description: "",
-        author: "",
+        authorName: "",
     });
 
     let handleInput = (e) => {
@@ -40,11 +40,11 @@ const AddBlog = () => {
 
     return (
 
-        <section className="mt-7">
+        <section className="mt-10">
             <div className="h-full">
                 {/* Left column container with background*/}
                 <div className="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
-                    <div className="shrink-1 mb-12 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12">
+                    <div className="shrink-1 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12">
                         <img
                             src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
                             className="w-full"
@@ -52,7 +52,7 @@ const AddBlog = () => {
                         />
                     </div>
                     {/* Right column container */}
-                    <div className="mb-12 md:mb-0 md:w-8/12 lg:w-5/12 xl:w-5/12">
+                    <div className="mb-20 md:mb-0 md:w-8/12 lg:w-5/12 xl:w-5/12">
 
                         <form onSubmit={sendData}>
 
@@ -113,8 +113,8 @@ const AddBlog = () => {
                                     id="grid-last-name"
                                     type="text"
                                     placeholder="Write author name"
-                                    name='author'
-                                    value={blogData.author}
+                                    name='authorName'
+                                    value={blogData.authorName}
                                     onChange={handleInput}
                                 />
                             </div>
